@@ -75,7 +75,7 @@ def get_json(url):
 
 
 def get_score_detail(cfg):  # 返回成绩信息的res
-    url = "http://api.jh.zjut.edu.cn/student/scoresDetailZf.php?ip=164&username="+ username + "&password="+ password+"&year={0}&term={1}". \
+    url = "http://api.jh.zjut.edu.cn/student/scoresDetailZf.php?ip=164&username="+ str(username) + "&password="+ str(password)+"&year={0}&term={1}". \
         format(cfg[0], cfg[1])
     score_detail = get_json(url)
     score_summary = {}
@@ -102,7 +102,7 @@ def get_score_detail(cfg):  # 返回成绩信息的res
 
 
 def get_gpa_info(cfg, res):  # 为res添加GPA信息
-    url = "http://api.jh.zjut.edu.cn/student/scoresZf.php?ip=164&username="+ username + "&password="+ password+"&year={0}&term={1}". \
+    url = "http://api.jh.zjut.edu.cn/student/scoresZf.php?ip=164&username="+ str(username) + "&password="+ str(password) +"&year={0}&term={1}". \
         format(cfg[0], cfg[1])
     score_detail = get_json(url)
     for score in score_detail["msg"]:
