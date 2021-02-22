@@ -4,7 +4,6 @@ import requests
 import json
 import time
 import copy
-import emoji
 from dingtalkchatbot.chatbot import DingtalkChatbot
 
 # 钉钉推送信息
