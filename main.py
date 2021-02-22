@@ -17,8 +17,8 @@ def messagePush(text):
     if dingPush_Switch:
         # 初始化机器人
         FlyBot = DingtalkChatbot(webhook, secret=secret)
-        at_mobiles = os.environ["PHONENUMBER"]
-        FlyBot.send_text(msg=text, at_mobiles=str(at_mobiles))
+        at_mobiles = ['18074113688']
+        FlyBot.send_text(msg=text, at_mobiles=at_mobiles)
 
 def get_gpa(msg):
     gp = 0
