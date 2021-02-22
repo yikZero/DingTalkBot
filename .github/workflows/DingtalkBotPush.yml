@@ -25,5 +25,7 @@ jobs:
         pip install requests os
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Push
+      env:
+        SCKEY: ${{ secrets.USERNAME_ZF }} ${{ secrets.SECRET_ZF }} ${{ secrets.PHONENUMBER }} ${{ secrets.DINGTALKBOT_WEBHOOK }} ${{ secrets.DINGTALKBOT_SECRET }}
       run: |
-        python main.py ${{ secrets.USERNAME_ZF }} ${{ secrets.SECRET_ZF }} ${{ secrets.PHONENUMBER }} ${{ secrets.DINGTALKBOT_WEBHOOK }} ${{ secrets.DINGTALKBOT_SECRET }}
+        python main.py
