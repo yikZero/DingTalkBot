@@ -26,4 +26,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Push
       run: |
-        python main.py ${{ secrets.UserName_zf }} ${{ secrets.Secret_zf }} ${{ secrets.PhoneNumber }} ${{ secrets.DingtalkBot_Webhook }} ${{ secrets.DingtalkBot_Secrets }}
+        python main.py ${{ secrets.USERNAME_ZF }} ${{ secrets.SECRET_ZF }} ${{ secrets.PHONENUMBER }} ${{ secrets.DINGTALKBOT_WEBHOOK }} ${{ secrets.DINGTALKBOT_SECRET }}
